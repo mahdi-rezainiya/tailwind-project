@@ -6,33 +6,50 @@
 </head>
 <body class="font-body text-gray-600">
 
-    <div> <!--start wrapper-->
-        <div> <!--start nav-->
-            <nav>
-                <div>
+    <div class="grid md:grid-cols-4 gap-0"> <!--start wrapper-->
+
+        <div class="md:col-span-1 md:flex md:justify-end bg-gray-100"> <!--start nav-->
+            <nav class="text-right">
+                <div class="flex justify-between items-center">
                     <h1 class=" text-green-500 sm:text-blue-500 md:text-red-500 font-bold uppercase p-4 border-b border-gray-200">
-                        <a href="#">OpenCode Food</a>
+                        <a class="hover:text-gray-700" href="#">OpenCode Food</a>
                     </h1>
+                    <div class="px-4 cursor-pointer md:hidden" id="burger">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg> 
+                    </div>
                 </div>
-                <ul>
-                    <li class="text-gray-700 font-bold"><a href="#"><span>Home</span></a></li>
-                    <li><a href="#"><span>About</span></a></li>
-                    <li><a href="#"><span>Contact</span></a></li>
+                <ul class="text-sm mt-6 hidden md:block" id="menu">
+
+                    <li class="text-gray-700 font-bold py-1">
+                        <a href="#" class="flex justify-end px-4 border-r-4 border-orange-400"><span>Home</span>
+                        <svg class="w-5 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                        </svg>
+                        </a></li>
+
+                    <li class="py-1"><a href="#" class="flex justify-end px-4 border-r-4 border-white-400"><span>About</span>
+                        <svg class="w-5 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+                        </svg>
+                        </a></li>
+
+                    <li class="py-1"><a href="#" class="flex justify-end px-4 border-r-4 border-white-400"><span>Contact</span>
+                        <svg class="w-5 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                        </svg>
+                        </a></li>
+
                 </ul>
             </nav>
         </div><!--end nav-->
 
-        <main class="px-16 py-6">
-            <div class="flex justify-end">
-                <a href="#" class="text-primary">Log in</a>
-                <a href="#" class="text-primary ml-2">Sign up</a>
+        <main class="px-16 py-6 bg-gray-50 md:col-span-3">
+            <div class="flex justify-center md:justify-end">
+                <a href="#" class="hover:bg-orange-400 hover:text-white btn text-orange-400 border-orange-400 md:border-2 transition ease-out duration-500">Log in</a>
+                <a href="#" class="hover:bg-orange-400 hover:text-white ml-2 btn text-orange-400 border-orange-400 md:border-2 transition ease-out duration-500">Sign up</a>
             </div>
-
-            <!-- <div class="bg-gray-200 my-20 flex items-center justify-center">
-                <div class="bg-red-500 h-4 w-6"></div>
-                <div class="bg-blue-500 h-8 w-6"></div>
-                <div class="bg-green-500 h-12 w-6"></div>
-            </div> -->
 
             <header>
                 <h2 class="text-gray-700 text-6xl font-bold">Recipes</h2>
@@ -42,15 +59,54 @@
             <div>
                 <h4 class="font-bold mt-12 pb-2 border-b-8 border-gray-300">Latest Recipes</h4>
 
-                <div class="mt-8">
+                <div class="mt-8 grid lg:grid-cols-3 gap-10">
                     <!-- Cards -->
-                    <div>
-                        <img src="" alt="ghorme">
-                        <div>
-                            <span>Ghorme</span>
-                            <span>Recipe by Opencode</span>
+                    <!-- <div class="bg-white rounded overflow-hidden shadow-md relative"> -->
+                    <div class="card hover:shadow-lg">
+                        <img src="/public/images/ghorme.jpg" alt="ghorme" class="w-full h-32 sm:h-48 object-cover">
+                        <div class="m-4">
+                            <span class="font-bold">Ghorme sabzi</span>
+                            <span class="block text-sm text-gray-400">Recipe by Opencode</span>
+                        </div>
+                        <!-- <div class="bg-secondary-100 text-secondary-200 uppercase font-bold text-xs rounded-full p-2 absolute top-0 ml-2 mt-2"> -->
+                        <div class="badge">
+                            <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>                              
+                            <span>3 hours</span>
                         </div>
                     </div>
+
+                    <div class="card hover:shadow-lg">
+                        <img src="/public/images/gheyme.jpg" alt="gheyme" class="w-full h-32 sm:h-48 object-cover">
+                        <div class="m-4">
+                            <span class="font-bold">Gheyme</span>
+                            <span class="block text-sm text-gray-400">Recipe by Opencode</span>
+                        </div>
+                        <!-- <div class="bg-secondary-100 text-secondary-200 uppercase font-bold text-xs rounded-full p-2 absolute top-0 ml-2 mt-2"> -->
+                        <div class="badge">
+                            <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>                              
+                            <span>2 hours</span>
+                        </div>
+                    </div>
+
+                    <div class="card hover:shadow-lg">
+                        <img src="/public/images/kabab.jpg" alt="kabab" class="w-full h-32 sm:h-48 object-cover">
+                        <div class="m-4">
+                            <span class="font-bold">kabab</span>
+                            <span class="block text-sm text-gray-400">Recipe by Opencode</span>
+                        </div>
+                        <!-- <div class="bg-secondary-100 text-secondary-200 uppercase font-bold text-xs rounded-full p-2 absolute top-0 ml-2 mt-2"> -->
+                        <div class="badge">
+                            <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>                              
+                            <span>25 min</span>
+                        </div>
+                    </div>
+
                 </div>
 
                 <h4 class="font-light mt-12 pb-2 border-b-2 border-gray-300">Most popular</h4>
@@ -61,12 +117,13 @@
                 </div>
 
                 <div class="flex justify-center">
-                    <div class="bg-secondary-100 text-secondary-200">Load More</div>
+                    <div class="hover:shadow-inner active:border-2 border-orange-400 btn bg-secondary-100 text-secondary-200 btn transform hover:scale-125 hover:bg-opacity-50 transition ease-out duration-300">Load More</div>
                 </div>
 
             </div>
         </main>
     </div><!--end wrapper-->
 
+    <script src="index.js"></script>
 </body>
 </html>
