@@ -4,42 +4,48 @@
     <link href="./style.css" rel="stylesheet">
     <title>OpenCode - Food</title>
 </head>
-<body class="text-red-900">
+<body class="font-body text-gray-600">
 
     <div> <!--start wrapper-->
         <div> <!--start nav-->
             <nav>
                 <div>
-                    <h1>
+                    <h1 class=" text-green-500 sm:text-blue-500 md:text-red-500 font-bold uppercase p-4 border-b border-gray-200">
                         <a href="#">OpenCode Food</a>
                     </h1>
                 </div>
                 <ul>
-                    <li><a href="#"><span>Home</span></a></li>
+                    <li class="text-gray-700 font-bold"><a href="#"><span>Home</span></a></li>
                     <li><a href="#"><span>About</span></a></li>
                     <li><a href="#"><span>Contact</span></a></li>
                 </ul>
             </nav>
         </div><!--end nav-->
 
-        <main>
-            <div>
-                <a href="#">Log in</a>
-                <a href="#">Sign up</a>
+        <main class="px-16 py-6">
+            <div class="flex justify-end">
+                <a href="#" class="text-primary">Log in</a>
+                <a href="#" class="text-primary ml-2">Sign up</a>
             </div>
 
+            <!-- <div class="bg-gray-200 my-20 flex items-center justify-center">
+                <div class="bg-red-500 h-4 w-6"></div>
+                <div class="bg-blue-500 h-8 w-6"></div>
+                <div class="bg-green-500 h-12 w-6"></div>
+            </div> -->
+
             <header>
-                <h2>Recipes</h2>
-                <h3>For EveryOne</h3>
+                <h2 class="text-gray-700 text-6xl font-bold">Recipes</h2>
+                <h3 class="text-2xl font-semibold pl-1">For EveryOne</h3>
             </header>
 
             <div>
-                <h4>Latest Recipes</h4>
+                <h4 class="font-bold mt-12 pb-2 border-b-8 border-gray-300">Latest Recipes</h4>
 
-                <div>
+                <div class="mt-8">
                     <!-- Cards -->
                     <div>
-                        <img src="./images/ghorme.jpg" alt="ghorme">
+                        <img src="" alt="ghorme">
                         <div>
                             <span>Ghorme</span>
                             <span>Recipe by Opencode</span>
@@ -47,15 +53,15 @@
                     </div>
                 </div>
 
-                <h4>Most popular</h4>
+                <h4 class="font-light mt-12 pb-2 border-b-2 border-gray-300">Most popular</h4>
 
-                <div>
+                <div class="mt-8">
                     <!-- cards -->
 
                 </div>
 
-                <div>
-                    <div>Load More</div>
+                <div class="flex justify-center">
+                    <div class="bg-secondary-100 text-secondary-200">Load More</div>
                 </div>
 
             </div>
